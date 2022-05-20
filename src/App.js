@@ -28,6 +28,7 @@ export default class App extends Component {
 
     async sttFromMic() {
         const tokenObj = await getTokenOrRefresh();
+        console.log(tokenObj);
         const speechConfig = speechsdk.SpeechConfig.fromAuthorizationToken(tokenObj.authToken, tokenObj.region);
         speechConfig.speechRecognitionLanguage = 'en-US';
         
@@ -85,7 +86,12 @@ export default class App extends Component {
     render() {
         return (
             <Container className="app-container">
-                <h1 className="display-4 mb-3">Speech sample app</h1>
+                <h1 className="display-4 mb-3">Cloud Assingment 3</h1>
+                <h3 className="display-5 mb-1">Ali Imran </h3>
+                <h3 className="display-5 mb-1">Noman Aziz </h3>
+                <h3 className="display-5 mb-1">Farjad Ilyas </h3>
+                <h3 className="display-5 mb-1">Nabeel Danish</h3>
+
 
                 <div className="row main-container">
                     <div className="col-6">
